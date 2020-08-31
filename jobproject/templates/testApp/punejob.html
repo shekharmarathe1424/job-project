@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static "css/demo.css"%}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Pune Current Job Openings!!!!</h1>
+{%if pune_job%}
+    <table>
+            <thead>
+            <th>Date</th>
+            <th>Company</th>
+            <th>Title</th>
+            <th>Eligilibility</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+
+            </thead>
+    {% for job in pune_job%}
+
+            <tr>
+                <td>{{job.date}}</td>
+                <td>{{job.company}}</td>
+                <td>{{job.title}}</td>
+                <td>{{job.eligilibility}}</td>
+                <td>{{job.address}}</td>
+                <td>{{job.email}}</td>
+                <td>{{job.phonenumber}}</td>
+            </tr>
+        {%endfor%}
+        </table>
+
+{%else%}
+    <p>Current No Jobs Openings!!!</p>
+{%endif%}
+</body>
+</html>

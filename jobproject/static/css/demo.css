@@ -1,0 +1,16 @@
+table{
+background:red;
+border:2px solid green;
+font-size:20px;
+margin:auto;
+}
+thead{
+background:yellow;
+}
+td{
+border:2px solid black;
+}
+h1{
+background:yellow;
+text-align:center;
+}
